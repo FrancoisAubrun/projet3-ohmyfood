@@ -1,0 +1,19 @@
+{
+  "name": "3_ohmyfood",
+  "version": "1.0.0",
+  "description": "Projet3",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:.public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FrancoisAubrun/projet3-ohmyfood.git"
+  },
+  "author": "François",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FrancoisAubrun/projet3-ohmyfood/issues"
+  },
+  "homepage": "https://github.com/FrancoisAubrun/projet3-ohmyfood#readme"
+}
