@@ -1,1 +1,37 @@
-$colour-primary: #15DEA5;
+$colour-primary: #9356DC;
+$colour-secondary: #FF79DA;
+$colour-tertiary: #99E2D0;
+$colour-black:#000000;
+$colour-light-grey: #f6f6f6;
+$colour-medium-grey: #eaeaea;
+$colour-dark-grey:#353535;
+
+
+
+
+@font-face
+{
+    font-family: 'Shrikhand';
+    src: url('/font/Shrikhand-Regular.ttf') format("ttf");
+    
+}
+
+@font-face
+{
+    font-family: 'Roboto-regular';
+    src: url('/font/Roboto-Regular.ttf') format("ttf");
+}
+
+@font-face
+{
+    font-family: 'Roboto-medium';
+    src: url('/font/Roboto-Medium.ttf') format("ttf");
+}
+
+$font-1: "Shrikhand", sans-serif;
+$font-2: "Roboto", sans-serif;
+$font-3: "Roboto-medium", sans-serif;
+
+
+
+$breakpoints: (desktop: 600px);
