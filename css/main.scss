@@ -1,55 +1,233 @@
-@import './2_utils/variables';
+/* Imports */
 
+@import "./2_utils/variables";
+
+/* Règles transverses */
 
 * {
-    margin: 0;
-    h1 {
-        font-size: 22px;
-        font-family: $font-1;
-        color: $colour-black;
-    }
-    h2 {
-        font-size: 20px;
-        font-family: $font-1;
-        color: $colour-black;
-    }
-    h3 {
-        font-size: 18px;
-        font-family: $font-1;
-        color: $colour-black;
-    }
-    h4 {
-        font-size: 16px;
-        font-family: $font-1;
-        color: $colour-black;
-    }
-    p {
-        font-size: 14px;
-        font-family: $font-2;
-        color: $colour-black;
-    }
+  margin: 0;
+  border: 0;
+  h1 {
+    font-size: 24px;
+    font-family: $font-1;
+    color: $colour-black;
+  }
+  h2 {
+    font-size: 18px;
+    font-family: $font-1;
+    color: $colour-dark-grey;
+    font-weight: 400;
+  }
+  h3 {
+    font-size: 16px;
+    font-family: $font-1;
+    font-weight: 600;
+  }
+  h4 {
+    font-size: 14px;
+    font-family: $font-1;
+    font-weight:200;
+    color: $colour-dark-grey;
+  }
+  p {
+    font-size: 14px;
+    font-family: $font-2;
+    color: $colour-black;
+  }
 }
+
+/* Header */
 
 header {
-    display:flex;
-    padding: 20px 20px 20px 20px;
-    justify-content: center;
+  display: flex;
+  padding: 20px 20px 20px 20px;
+  justify-content: center;
 }
 
-.searchbar {
-    margin-bottom: 20px;
-    width: 100%;
-    
+/* Section 1 = searchbar */
 
-    .form-control {
-        width: 100%;
-        height: 40px;
-        font-size:16px;
-        font-weight: 600;
-        color: $colour-black;
-        text-align: center;
-        font-family: $font-3;
-        background-color: $colour-medium-grey;
-    }
+.searchbar {
+  width: 100%;
+
+  .form-control {
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    color: $colour-black;
+    text-align: center;
+    font-family: $font-3;
+    background: linear-gradient(
+      180deg,
+      rgba(181, 181, 181, 1) 0%,
+      rgba(234, 234, 234, 1) 17%
+    );
   }
-  
+}
+
+/* Section 2 = bandeau d'exploration */
+
+.exploration {
+    text-align: center;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+    background-color: $colour-light-grey;
+
+  h1 {
+    margin: 0 60px 20px 60px;
+    padding-top: 40px;
+  }
+
+  h2 {
+    margin: 20px 30px 40px 30px;
+  }
+
+  .btn-explorer {
+    display: flex;
+    height: 55px;
+    width: 60%;
+    margin: 0 20% 0 20%;
+    background: linear-gradient($colour-secondary, $colour-primary);
+    color: #fff;
+    border-top-right-radius: 10% 50%;
+    border-bottom-right-radius: 10% 50%;
+    border-top-left-radius: 10% 50%;
+    border-bottom-left-radius: 10% 50%;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+}
+
+/* Section 3 = Fonctionnement */
+
+.fonctionnement {
+    padding-bottom: 40px;
+
+  h1 {
+    margin: 0 0 30px 30px;
+  }
+
+  h3 {
+    color: #000;
+  }
+
+  .étape-1,
+  .étape-2,
+  .étape-3 {
+    display: flex;
+    height: 70px;
+    width: 90%;
+    margin: 0 5% 20px 5%;
+    color: #000;
+    background-color: $colour-light-grey;
+    border-top-right-radius: 5% 30%;
+    border-bottom-right-radius: 5% 30%;
+    border-top-left-radius: 5% 30%;
+    border-bottom-left-radius: 5% 30%;
+    box-shadow: 0px 10px 18px 1px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .numero {
+    position: absolute;
+    text-align: center;
+    left: 15px;
+    color: #fff;
+    font-family: $font-1;
+    font-size: 14px;
+    background-color: $colour-primary;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+  }
+
+  i {
+    position: absolute;
+    text-align: center;
+    left: 65px;
+    color: $colour-medium2-grey;
+  }
+}
+
+/* Section 4 = Restaurants */
+
+.restaurants {
+    padding-top: 60px;
+    padding-bottom: 40px;
+    background-color: $colour-light-grey;
+
+
+    h1 {
+       margin: 0 0 30px 30px;
+    }
+
+    .restau-1, .restau-2,  .restau-3,  .restau-4 { 
+        margin: 0 20px 20px 20px;
+        background-color: #fff;
+        border-radius:5%;
+        height:250px;
+        box-shadow: 0px 10px 18px 1px rgba(0, 0, 0, 0.1);
+
+    }
+   
+    img {
+        width:100%;
+        height:175px;
+        object-fit: cover;
+        object-position: 50% 50%;
+        border-radius:5%;
+    }
+
+    h3, h4, i {
+        display:flex;
+    }
+
+    h3, H4 {
+        width:80%;
+        padding-top: 10px;
+        padding-left:10px;
+        float:left;
+    }
+
+    i {
+        width:10%;
+        float:right;
+        }
+}
+
+ /* Footer - affiche les autres infos utiles */
+
+.footer {
+    background-color: $colour-dark-grey;
+    color:#FFF;
+    padding: 30px 0 20px 20px;
+
+    .logo {
+        fill:#fff;
+        padding-bottom: 20px;
+        width:30%;
+    }
+
+    p {
+        color:#FFF;
+        margin-bottom:10px;
+    }
+
+    .proposer, .partenaire {
+        display:flex;
+        width: 100%;
+        flex-direction: row;
+       
+
+        i {
+            width:8%;
+            float:left;
+        }
+    }
+
+
+
+}
