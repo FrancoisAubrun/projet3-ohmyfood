@@ -12,21 +12,21 @@ $colour-dark-grey:#353535;
 
 @font-face
 {
-    font-family: 'Shrikhand';
-    src: url('/font/Shrikhand-Regular.ttf') format("ttf");
+    font-family: "Shrikhand-Regular";
+    src: url("/font/Shrikhand-Regular.ttf") format("ttf");
     
 }
 
 @font-face
 {
-    font-family: 'Roboto-regular';
-    src: url('/font/Roboto-Regular.ttf') format("ttf");
+    font-family: "Roboto-Regular";
+    src: url("/font/Roboto-Regular.ttf") format("ttf");
 }
 
 @font-face
 {
-    font-family: 'Roboto-medium';
-    src: url('/font/Roboto-Medium.ttf') format("ttf");
+    font-family: "Roboto-Medium";
+    src: url("/font/Roboto-Medium.ttf") format("ttf");
 }
 
 $font-1: "Shrikhand", sans-serif;
