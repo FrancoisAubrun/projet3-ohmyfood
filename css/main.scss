@@ -34,6 +34,22 @@
     font-family: $font-2;
     color: $colour-black;
   }
+
+  .btn-explorer {
+    display: flex;
+    height: 55px;
+    width: 60%;
+    margin: 0 20% 0 20%;
+    background: linear-gradient($colour-secondary, $colour-primary);
+    color: #fff;
+    border-top-right-radius: 10% 50%;
+    border-bottom-right-radius: 10% 50%;
+    border-top-left-radius: 10% 50%;
+    border-bottom-left-radius: 10% 50%;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
 }
 
 /* Header */
@@ -92,22 +108,6 @@ header {
 
   h2 {
     margin: 20px 30px 40px 30px;
-  }
-
-  .btn-explorer {
-    display: flex;
-    height: 55px;
-    width: 60%;
-    margin: 0 20% 0 20%;
-    background: linear-gradient($colour-secondary, $colour-primary);
-    color: #fff;
-    border-top-right-radius: 10% 50%;
-    border-bottom-right-radius: 10% 50%;
-    border-top-left-radius: 10% 50%;
-    border-bottom-left-radius: 10% 50%;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
   }
 }
 
@@ -223,7 +223,7 @@ header {
 .footer {
   background-color: $colour-dark-grey;
   color: #fff;
-  padding: 30px 0 20px 20px;
+  padding: 30px 0 20px 25px;
 
   img {
     fill: #fff;
@@ -260,20 +260,63 @@ header {
 
 /* menu */
 .menu {
-    width:100%;
-    background-color: $colour-light-grey;
-    margin-top:-50px;
-    position:relative;
-    border-top-right-radius: 40px;
-    border-top-left-radius: 40px;
+  width: 100%;
+  background-color: $colour-light-grey;
+  margin-top: -50px;
+  padding-bottom:80px;
+  position: relative;
+  border-top-right-radius: 40px;
+  border-top-left-radius: 40px;
 
-    .titremenu {
-        padding-left: 20px;
-        padding-top:40px;
-            h1 {
-            font-family: $font-1
-            }
+  .titremenu {
+    padding: 40px 0 10px 20px;
+
+    h1 {
+      font-family: $font-1;
+    }
+  }
+
+
+    /* menu_détail */
+
+    .menu_detail {
+
+  h2 {
+    margin-top:40px;
+    padding: 0 0 10px 20px;
+    .underlined {
+        text-decoration: underline $colour-tertiary;
+        text-decoration-thickness: 4px;
+        text-underline-offset: 8px;
+    }
+  }
+
+  .choix {
+    padding: 10px 0 30px 20px;
+    margin: 20px 20px 10px 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    height: 25px;
+    box-shadow: 0px 10px 10px 1px rgba(0, 0, 0, 0.05);
+
+    h3, h4 {
+        display:flex;
+        width: 80%;
+        padding-top: 5px;
+        float: left;
+    }
+
+    p {
+        display:flex;
+        width: 10%;
+        float: right;
+        padding-right:10px;
+        font-weight: 600;
 
     }
+  }
 }
-
+  .btn-explorer {
+      margin-top: 50px;
+  }
+}
