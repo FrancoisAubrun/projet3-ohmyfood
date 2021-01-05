@@ -1,20 +1,5 @@
 @charset "UTF-8";
 /* Imports */
-@font-face {
-  font-family: "Shrikhand-Regular";
-  src: url("/font/Shrikhand-Regular.ttf") format("ttf");
-}
-
-@font-face {
-  font-family: "Roboto-Regular";
-  src: url("/font/Roboto-Regular.ttf") format("ttf");
-}
-
-@font-face {
-  font-family: "Roboto-Medium";
-  src: url("/font/Roboto-Medium.ttf") format("ttf");
-}
-
 /* Règles transverses */
 * {
   margin: 0;
@@ -44,19 +29,27 @@
   font-size: 16px;
   font-family: "Roboto", sans-serif;
   font-weight: 600;
+  color: #000;
 }
 
 * h5 {
-  font-size: 14px;
+  font-size: 15px;
   font-family: "Roboto", sans-serif;
-  font-weight: 200;
-  color: #353535;
+  font-weight: 400;
+  color: #000;
 }
 
 * p {
   font-size: 14px;
   font-family: "Roboto", sans-serif;
   color: #000000;
+}
+
+* a {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  text-decoration: none;
 }
 
 * .btn-explorer {
@@ -68,7 +61,6 @@
   margin: 0 20% 0 20%;
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(#FF79DA, #9356DC);
-  color: #fff;
   border-top-right-radius: 10% 50%;
   border-bottom-right-radius: 10% 50%;
   border-top-left-radius: 10% 50%;
@@ -80,6 +72,10 @@
       -ms-flex-pack: center;
           justify-content: center;
   cursor: pointer;
+}
+
+* .btn-explorer a {
+  color: #FFF;
 }
 
 /* Header */
@@ -103,6 +99,10 @@ header .fas {
   top: 25px;
 }
 
+header a {
+  color: #000;
+}
+
 /* Accueil */
 /* Section 1 = searchbar */
 .searchbar {
@@ -116,7 +116,7 @@ header .fas {
   font-weight: 600;
   color: #000000;
   text-align: center;
-  font-family: "Roboto-medium", sans-serif;
+  font-family: "Roboto", sans-serif;
   background: -webkit-gradient(linear, left top, left bottom, from(#b5b5b5), color-stop(17%, #eaeaea));
   background: linear-gradient(180deg, #b5b5b5 0%, #eaeaea 17%);
 }
@@ -129,7 +129,7 @@ header .fas {
   background-color: #f6f6f6;
 }
 
-.exploration h2 {
+.exploration h1 {
   margin: 0 60px 20px 60px;
   padding-top: 40px;
 }
@@ -181,7 +181,6 @@ header .fas {
   position: absolute;
   text-align: center;
   left: 9px;
-  font-family: "Shrikhand", sans-serif;
   font-size: 14px;
   background-color: #9356DC;
   border-radius: 50%;
@@ -366,5 +365,9 @@ header .fas {
 
 .menu .btn-explorer {
   margin-top: 50px;
+}
+
+.menu .btn-explorer a {
+  color: #fff;
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,115 +1,147 @@
 <!DOCTYPE html>
 
 <html>
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="initial-scale=1">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1" />
 
-      <!-- CSS -->
-      <link rel="stylesheet" href="css/main.css">
-      <title>Ohmyfood Accueil</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"/>
 
-        <!-- ICONS -->
+    <title>Ohmyfood Accueil</title>
 
-      <script
+    <!-- ICONS -->
+    <script
       src="https://kit.fontawesome.com/d6dc5bfd4b.js"
       crossorigin="anonymous"
-      ></script>
+    ></script>
+  </head>
 
-   </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <img src="images/logo/ohmyfood.png" alt="logo" class="logo" />
+    </header>
 
-   <body>
-
-      <!-- Header -->
-      <header>
-         <img src="images/logo/ohmyfood.png" alt="logo" class="logo">
-      </header>
-      
-      <!-- Section 1 = searchbar-->
-      <section id="searchbar">
-         <div class="searchbar">
-            <input class="form-control" type="search" placeholder="Paris, Belleville" /> 
+    <!-- Section 1 = searchbar-->
+    <section id="searchbar">
+      <div class="searchbar">
+        <input
+          class="form-control"
+          type="search"
+          placeholder="Paris, Belleville"
+        />
       </div>
-      </section> 
+    </section>
 
-      <!-- Section 2 = bandeau d'exploration -->
-      <section id="exploration">
-         <div class="exploration">
-            <h1>Réservez le menu qui vous convient</h1>
-            <h3>Découvrez des restaurants d'exception, séléctionnés par nos soins</h3>
-            <div class="btn-explorer"><h4>Explorer nos restaurants</h4></div>
-         </div>
-      </section>
+    <!-- Section 2 = bandeau d'exploration -->
+    <section id="exploration">
+      <div class="exploration">
+        <h1>Réservez le menu qui vous convient</h1>
+        <h3>
+          Découvrez des restaurants d'exception, séléctionnés par nos soins
+        </h3>
+        <div class="btn-explorer"><a href="#restaurants"> Explorer nos restaurants</a></div>
+      </div>
+    </section>
 
-      <!-- Section 3 = Fonctionnement -->
-      <section id="fonctionnement">
-         <div class="fonctionnement">
-         <h2>Fonctionnement</h2>
-            <div class="fontionnement-boutons">
-               <div class="étape-1">
-                  <div class="numero"><p>1</p></div>
-                  <i class="fas fa-mobile-alt"></i>
-                  <h4>Choisissez un restaurant</h4>
-               </div>
-               <div class="étape-2">
-                  <div class="numero"><p>2</p></div>
-                  <i class="fas fa-bars"></i>
-                  <h4>Composez votre menu</h4>
-               </div>
-               <div class="étape-3">
-                  <div class="numero"><p>3</p></div>
-                  <i class="fas fa-store"></i>
-                  <h4>Dégustez au restaurant</h4>
-               </div>
+    <!-- Section 3 = Fonctionnement -->
+    <section id="fonctionnement">
+      <div class="fonctionnement">
+        <h2>Fonctionnement</h2>
+        <div class="fontionnement-boutons">
+          <div class="étape-1">
+            <div class="numero"><p>1</p></div>
+            <i class="fas fa-mobile-alt"></i>
+            <h4>Choisissez un restaurant</h4>
+          </div>
+          <div class="étape-2">
+            <div class="numero"><p>2</p></div>
+            <i class="fas fa-bars"></i>
+            <h4>Composez votre menu</h4>
+          </div>
+          <div class="étape-3">
+            <div class="numero"><p>3</p></div>
+            <i class="fas fa-store"></i>
+            <h4>Dégustez au restaurant</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4 = Restaurants -->
+    <section id="restaurants">
+      <div id="restaurants" class="restaurants">
+        <h2>Restaurants</h2>
+
+        <a href="Menu-3.html">
+            <div class="restau">
+               <img
+                  src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                  alt="restau-1"
+               />
+               <h4>La palette du goût</h4>
+               <h5>Ménilmontant</h5>
+               <i class="far fa-heart"></i>
             </div>
-         </div>
-      </section>
+        </a>
 
-      <!-- Section 4 = Restaurants -->
-      <section id="restaurants">
-         <div class="restaurants">
-            <h2>Restaurants</h2>
-               <div class="restau">
-                  <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="restau-1"/>
-                  <h4>La palette du goût</h4>
-                  <h5>Ménilmontant</h5>
-                  <i class="far fa-heart"></i>
-               </div>
+        <a href="Menu-2.html">
+            <div class="restau">
+               <img
+                  src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+                  alt="restau-2"
+               />
+               <h4>La note enchantée</h4>
+               <h5>Charonne</h5>
+               <i class="far fa-heart"></i>
+            </div>
+      </a>
 
-               <div class="restau">
-                  <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="restau-2"/>
-                  <h4>La note enchantée</h4>
-                  <h5>Charonne</h5>
-                  <i class="far fa-heart"></i>
-               </div>
+        <a href="Menu-1.html">
+            <div class="restau">
+               <img
+                  src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+                  alt="restau-3"
+               />
+               <h4>À la française</h4>
+               <h5>Cité Rouge</h5>
+               <i class="far fa-heart"></i>
+            </div>
+         </a>
 
-               <div class="restau">
-                  <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="restau-3"/>
-                  <h4>À la française</h4>
-                  <h5>Cité Rouge</h5>
-                  <i class="far fa-heart"></i>
-               </div>
+         <a href="Menu-3.html">
+            <div class="restau">
+               <img
+                  src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+                  alt="restau-4"
+               />
+               <h4>Le délice des sens</h4>
+               <h5>Folie-Méricourt</h5>
+               <i class="far fa-heart"></i>
+            </div>
+         </a>
 
-               <div class="restau">
-                  <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="restau-4"/>
-                  <h4>Le délice des sens</h4>
-                  <h5>Folie-Méricourt</h5>
-                  <i class="far fa-heart"></i>
-               </div>
-         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Footer - affiche les autres infos utiles -->
-      <footer id="footer">
-         <div class="footer">
-            <img src="images/logo/ohmyfood@2x.svg" alt="logo" class="logo">
-            <span class="proposer"><i class="fas fa-utensils"></i><p>Proposer un restaurant</p></span>
-            <span class="partenaire"><i class="fas fa-hands-helping"></i><p>Devenir partenaire</p></span>
-            <p>Mentions légales</p>
-            <p>Contact</p>
-         </div>
-      </footer>
-
-   </body>
-
+    <!-- Footer - affiche les autres infos utiles -->
+    <footer id="footer">
+      <div class="footer">
+        <img src="images/logo/ohmyfood@2x.svg" alt="logo" class="logo" />
+        <span class="proposer"
+          ><i class="fas fa-utensils"></i>
+          <p>Proposer un restaurant</p></span
+        >
+        <span class="partenaire"
+          ><i class="fas fa-hands-helping"></i>
+          <p>Devenir partenaire</p></span
+        >
+        <p>Mentions légales</p>
+        <p>Contact</p>
+      </div>
+    </footer>
+  </body>
 </html>
