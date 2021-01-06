@@ -27,13 +27,13 @@
     font-size: 16px;
     font-family: $font-2;
     font-weight: 600;
-    color:#000;
+    color: #000;
   }
   h5 {
     font-size: 15px;
     font-family: $font-2;
     font-weight: 400;
-    color:#000;
+    color: #000;
   }
 
   p {
@@ -46,7 +46,8 @@
     font-size: 16px;
     font-family: $font-2;
     font-weight: 400;
-    text-decoration:none;
+    text-decoration: none;
+    cursor: default;
   }
 
   .btn-explorer {
@@ -64,7 +65,7 @@
     cursor: pointer;
 
     a {
-        color:#FFF
+      color: #fff;
     }
   }
 }
@@ -86,8 +87,8 @@ header {
     top: 25px;
   }
 
-  a{
-      color:#000;
+  a {
+    color: #000;
   }
 }
 
@@ -161,7 +162,10 @@ header {
     box-shadow: 0px 10px 18px 1px rgba(0, 0, 0, 0.1);
     align-items: center;
     justify-content: center;
-    cursor: pointer;
+
+    &:hover {
+      background-color: #f5edff;
+    }
   }
 
   .numero {
@@ -209,32 +213,53 @@ header {
     height: 250px;
     box-shadow: 0px 10px 18px 1px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-  }
+    position: relative;
+    cursor: pointer;
 
-  img {
-    width: 100%;
-    height: 175px;
-    object-fit: cover;
-    object-position: 50% 50%;
-  }
+    .nouveau {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: $colour-tertiary;
+      font-size: 12px;
+      padding: 6px;
+      border-radius: 2px;
+      color: #008766;
+      font-weight: 600;
+    }
 
-  h4,
-  h5,
-  i {
-    display: flex;
-  }
+    a {
+      cursor: pointer;
+    }
 
-  h4,
-  h5 {
-    width: 80%;
-    padding-top: 10px;
-    padding-left: 10px;
-    float: left;
-  }
+    img {
+      width: 100%;
+      height: 175px;
+      object-fit: cover;
+      object-position: 50% 50%;
+    }
 
-  i {
-    width: 10%;
-    float: right;
+    h4,
+    h5 {
+      display: flex;
+      width: 80%;
+      padding-top: 10px;
+      padding-left: 10px;
+      float: left;
+    }
+    
+    button {
+      display: flex;
+      width: 10%;
+      float: right;
+      color: #000;
+      cursor: pointer;
+      background:#FFF;
+
+      &:active {
+        background-color: linear-gradient($colour-secondary, $colour-primary);
+      }
+    }
   }
 }
 
@@ -276,7 +301,7 @@ header {
 
 .headermenuimg {
   width: 100%;
-  height:250px;
+  height: 250px;
   object-fit: cover;
 }
 
@@ -285,7 +310,7 @@ header {
   width: 100%;
   background-color: $colour-light-grey;
   margin-top: -50px;
-  padding-bottom:80px;
+  padding-bottom: 80px;
   position: relative;
   border-top-right-radius: 40px;
   border-top-left-radius: 40px;
@@ -298,52 +323,50 @@ header {
     }
   }
 
+  /* menu_détail */
 
-    /* menu_détail */
-
-    .menu_detail {
-
-  h3 {
-    margin-top:40px;
-    padding: 0 0 10px 20px;
-    .underlined {
+  .menu_detail {
+    h3 {
+      margin-top: 40px;
+      padding: 0 0 10px 20px;
+      .underlined {
         text-decoration: underline $colour-tertiary;
         text-decoration-thickness: 4px;
         text-underline-offset: 8px;
+      }
     }
-  }
 
-  .choix {
-    padding: 10px 0 30px 20px;
-    margin: 20px 20px 10px 20px;
-    background-color: #fff;
-    border-radius: 15px;
-    height: 25px;
-    box-shadow: 0px 10px 10px 1px rgba(0, 0, 0, 0.05);
+    .choix {
+      padding: 10px 0 30px 20px;
+      margin: 20px 20px 10px 20px;
+      background-color: #fff;
+      border-radius: 15px;
+      height: 25px;
+      box-shadow: 0px 10px 10px 1px rgba(0, 0, 0, 0.05);
 
-    h4, h5 {
-        display:flex;
+      h4,
+      h5 {
+        display: flex;
         width: 86%;
         padding-top: 5px;
         float: left;
-    }
+      }
 
-    p {
-        display:flex;
+      p {
+        display: flex;
         width: 10%;
         float: right;
-        padding-right:4%;
-        padding-top:5px;
+        padding-right: 4%;
+        padding-top: 5px;
         font-weight: 600;
-
+      }
     }
   }
-}
   .btn-explorer {
-      margin-top: 50px;
+    margin-top: 50px;
 
-      a {
-          color:#fff;
-      }
+    a {
+      color: #fff;
+    }
   }
 }

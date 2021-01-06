@@ -50,6 +50,7 @@
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   text-decoration: none;
+  cursor: default;
 }
 
 * .btn-explorer {
@@ -75,7 +76,7 @@
 }
 
 * .btn-explorer a {
-  color: #FFF;
+  color: #fff;
 }
 
 /* Header */
@@ -174,7 +175,12 @@ header a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  cursor: pointer;
+}
+
+.fonctionnement .étape-1:hover,
+.fonctionnement .étape-2:hover,
+.fonctionnement .étape-3:hover {
+  background-color: #f5edff;
 }
 
 .fonctionnement .numero {
@@ -223,9 +229,27 @@ header a {
   -webkit-box-shadow: 0px 10px 18px 1px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 10px 18px 1px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  position: relative;
+  cursor: pointer;
 }
 
-.restaurants img {
+.restaurants .restau .nouveau {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #99E2D0;
+  font-size: 12px;
+  padding: 6px;
+  border-radius: 2px;
+  color: #008766;
+  font-weight: 600;
+}
+
+.restaurants .restau a {
+  cursor: pointer;
+}
+
+.restaurants .restau img {
   width: 100%;
   height: 175px;
   -o-object-fit: cover;
@@ -234,25 +258,30 @@ header a {
      object-position: 50% 50%;
 }
 
-.restaurants h4,
-.restaurants h5,
-.restaurants i {
+.restaurants .restau h4,
+.restaurants .restau h5 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.restaurants h4,
-.restaurants h5 {
   width: 80%;
   padding-top: 10px;
   padding-left: 10px;
   float: left;
 }
 
-.restaurants i {
+.restaurants .restau button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 10%;
   float: right;
+  color: #000;
+  cursor: pointer;
+  background: #FFF;
+}
+
+.restaurants .restau button:active {
+  background-color: linear-gradient(#FF79DA, #9356DC);
 }
 
 /* Footer - affiche les autres infos utiles */
@@ -343,7 +372,8 @@ header a {
           box-shadow: 0px 10px 10px 1px rgba(0, 0, 0, 0.05);
 }
 
-.menu .menu_detail .choix h4, .menu .menu_detail .choix h5 {
+.menu .menu_detail .choix h4,
+.menu .menu_detail .choix h5 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
