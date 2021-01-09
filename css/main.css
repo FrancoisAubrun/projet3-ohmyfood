@@ -9,9 +9,10 @@
 }
 
 * h1 {
-  font-size: 24px;
+  font-size: 28px;
   font-family: "Roboto", sans-serif;
   color: #000000;
+  font-weight: 400;
 }
 
 * h2 {
@@ -52,7 +53,6 @@
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   text-decoration: none;
-  cursor: default;
 }
 
 * .btn-explorer {
@@ -77,7 +77,12 @@
   cursor: pointer;
 }
 
-* .btn-explorer a {
+* .btn-explorer p {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+  cursor: pointer;
   color: #fff;
 }
 
@@ -139,6 +144,10 @@ header a {
 
 .exploration h3 {
   margin: 20px 30px 40px 30px;
+}
+
+.exploration a {
+  cursor: pointer;
 }
 
 /* Section 3 = Fonctionnement */
@@ -265,25 +274,23 @@ header a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 80%;
+  width: 75%;
   padding-top: 10px;
   padding-left: 10px;
   float: left;
 }
 
-.restaurants .restau button {
+.restaurants .restau .fa-heart::before {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 10%;
+  font-size: 170%;
+  padding-top: 15px;
+  width: 15%;
   float: right;
   color: #000;
   cursor: pointer;
-  background: #FFF;
-}
-
-.restaurants .restau button:active {
-  background-color: linear-gradient(#FF79DA, #9356DC);
+  background: #fff;
 }
 
 /* Footer - affiche les autres infos utiles */
@@ -303,6 +310,10 @@ header a {
 .footer p {
   color: #fff;
   margin-bottom: 10px;
+}
+
+.footer a {
+  cursor: pointer !important;
 }
 
 .footer .proposer,
@@ -346,10 +357,29 @@ header a {
 
 .menu .titremenu {
   padding: 40px 0 10px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .menu .titremenu h1 {
   font-family: "Shrikhand", sans-serif;
+  width: 80%;
+}
+
+.menu .titremenu i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 10%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 130%;
+  padding-right: 10%;
 }
 
 .menu .menu_detail h3 {
@@ -372,6 +402,33 @@ header a {
   height: 25px;
   -webkit-box-shadow: 0px 10px 10px 1px rgba(0, 0, 0, 0.05);
           box-shadow: 0px 10px 10px 1px rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-animation: fadein 1s;
+          animation: fadein 1s;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+    margin-top: 40px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 20px;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    margin-top: 40px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 20px;
+  }
 }
 
 .menu .menu_detail .choix h4,
@@ -382,17 +439,95 @@ header a {
   width: 86%;
   padding-top: 5px;
   float: left;
+  white-space: nowrap;
 }
 
 .menu .menu_detail .choix p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 10%;
+  width: 8%;
   float: right;
+  padding-left: 2%;
   padding-right: 4%;
   padding-top: 5px;
   font-weight: 600;
+  z-index: 1;
+  background-color: #fff;
+}
+
+.menu .menu_detail .choix .check {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 0;
+  background-color: #99E2D0;
+  height: 65px;
+  width: 60px;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  padding: 0;
+  margin: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.menu .menu_detail .choix .check i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 65px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.menu .menu_detail .choix:hover .check {
+  opacity: 1;
+  -webkit-animation: apparition 0.5s;
+          animation: apparition 0.5s;
+}
+
+@-webkit-keyframes apparition {
+  from {
+    right: -60px;
+  }
+  to {
+    right: 0px;
+  }
+}
+
+@keyframes apparition {
+  from {
+    right: -60px;
+  }
+  to {
+    right: 0px;
+  }
+}
+
+.menu .menu_detail .choix:hover i {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.menu .menu_detail .choix:hover h4,
+.menu .menu_detail .choix:hover h5 {
+  width: 70%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.menu .menu_detail .choix:hover p {
+  padding-right: 20%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .menu .btn-explorer {
