@@ -446,7 +446,7 @@ header a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 8%;
+  width: 20px;
   float: right;
   padding-left: 2%;
   padding-right: 4%;
@@ -519,13 +519,13 @@ header a {
 
 .menu .menu_detail .choix:hover h4,
 .menu .menu_detail .choix:hover h5 {
-  width: 70%;
+  width: 65%;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
 .menu .menu_detail .choix:hover p {
-  padding-right: 20%;
+  padding-right: 70px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
