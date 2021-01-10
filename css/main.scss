@@ -54,7 +54,8 @@
     display: flex;
     height: 55px;
     width: 60%;
-    margin: 0 20% 0 20%;
+    max-width: 350px;
+    margin: 0 auto 0 auto;
     background: linear-gradient($colour-secondary, $colour-primary);
     border-top-right-radius: 10% 50%;
     border-bottom-right-radius: 10% 50%;
@@ -81,9 +82,11 @@ header {
   display: flex;
   padding: 20px 20px 20px 20px;
   justify-content: center;
+  width:100%;
 
   .logo {
-    width: 50%;
+    width: 60%;
+    max-width: 500px;
   }
 
   .fas {
@@ -94,6 +97,8 @@ header {
 
   a {
     color: #000;
+    justify-content:center;
+    display:flex;
   }
 }
 
@@ -149,6 +154,12 @@ header {
 
   h2 {
     margin: 0 0 30px 30px;
+
+    @media screen and (min-width: 1000px) {
+      display: flex;
+      font-size: 35px;
+      justify-content: center;
+    }
   }
 
   h3 {
@@ -161,7 +172,8 @@ header {
     display: flex;
     height: 70px;
     width: 90%;
-    margin: 0 5% 20px 5%;
+    max-width: 600px;
+    margin: 0 auto 20px auto;
     color: #000;
     background-color: $colour-light-grey;
     border-top-right-radius: 5% 30%;
@@ -171,6 +183,7 @@ header {
     box-shadow: 0px 10px 18px 1px rgba(0, 0, 0, 0.1);
     align-items: center;
     justify-content: center;
+    position: relative;
 
     &:hover {
       background-color: #f5edff;
@@ -180,7 +193,7 @@ header {
   .numero {
     position: absolute;
     text-align: center;
-    left: 9px;
+    left: -12px;
     font-size: 14px;
     background-color: $colour-primary;
     border-radius: 50%;
@@ -199,7 +212,7 @@ header {
   i {
     position: absolute;
     text-align: center;
-    left: 65px;
+    left: 40px;
     color: $colour-medium2-grey;
   }
 }
@@ -211,12 +224,25 @@ header {
   padding-bottom: 40px;
   background-color: $colour-light-grey;
 
+  @media screen and (min-width: 1000px) {
+    width: 100%;
+    height: 600px;
+  }
+
   h2 {
     margin: 0 0 30px 30px;
+
+    @media screen and (min-width: 1000px) {
+      display: flex;
+      font-size: 35px;
+      justify-content: center;
+    }
   }
 
   .restau {
-    margin: 0 20px 20px 20px;
+    width: 92%;
+    max-width: 700px;
+    margin: 0 auto 20px auto;
     background-color: #fff;
     border-radius: 5%;
     height: 250px;
@@ -224,6 +250,13 @@ header {
     overflow: hidden;
     position: relative;
     cursor: pointer;
+
+    @media screen and (min-width: 1000px) {
+      width: 40%;
+      float: left;
+      margin: 0 0 30px 9.5%;
+      height: 250px;
+    }
 
     .nouveau {
       position: absolute;
@@ -281,6 +314,7 @@ header {
     color: #fff;
     padding-bottom: 20px;
     width: 30%;
+    max-width: 200px;
   }
 
   p {
@@ -299,7 +333,7 @@ header {
     flex-direction: row;
 
     i {
-      width: 8%;
+      width: 30px;
       float: left;
     }
   }
@@ -329,18 +363,33 @@ header {
     padding: 40px 0 10px 20px;
     display: flex;
 
+    @media screen and (min-width: 1000px) {
+      flex-direction: column;
+    }
+
     h1 {
       font-family: $font-1;
-      width: 80%;
+      width: 85%;
+      @media screen and (min-width: 1000px) {
+        display: flex;
+        font-size: 35px;
+        width: 100%;
+        justify-content: center;
+      }
     }
 
     i {
       display: flex;
-      width: 10%;
+      width: 7%;
       align-items: center;
       justify-content: center;
       font-size: 130%;
-      padding-right: 10%;
+      padding-right: 8%;
+
+      @media screen and (min-width: 1000px) {
+        width: 100%;
+        justify-content: center;
+      }
     }
   }
 
@@ -350,16 +399,25 @@ header {
     h3 {
       margin-top: 40px;
       padding: 0 0 10px 20px;
+
+      @media screen and (min-width: 1000px) {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+      }
       .underlined {
         text-decoration: underline $colour-tertiary;
         text-decoration-thickness: 4px;
         text-underline-offset: 8px;
       }
-    }
+      }
+    
 
     .choix {
+      width: 92%;
+      max-width: 800px;
       padding: 10px 0 30px 20px;
-      margin: 20px 20px 10px 20px;
+      margin: 20px auto 10px auto;
       background-color: #fff;
       border-radius: 15px;
       height: 25px;
@@ -388,6 +446,7 @@ header {
         padding-top: 5px;
         float: left;
         white-space: nowrap;
+        transition: all 0.5s ease;
       }
 
       p {
@@ -400,6 +459,7 @@ header {
         font-weight: 600;
         z-index: 1;
         background-color: #fff;
+        transition: all 0.5s;
       }
 
       .check {
@@ -415,13 +475,14 @@ header {
         padding: 0;
         margin: 0;
         justify-content: center;
+        transition: all 0.5s;
 
         i {
           display: flex;
           height: 65px;
           align-items: center;
           color: #fff;
-          transition: 0.5s;
+          transition: all 0.5s;
         }
       }
       &:hover {
@@ -445,11 +506,9 @@ header {
         h4,
         h5 {
           width: 65%;
-          transition: 0.5s;
         }
         p {
           padding-right: 70px;
-          transition: 0.5s;
         }
       }
     }
