@@ -337,13 +337,11 @@ header a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  right: 35px;
+  position: absolute;
   font-size: 170%;
-  padding-top: 15px;
-  width: 15%;
-  float: right;
   color: #000;
   cursor: pointer;
-  background: #fff;
 }
 
 /* Footer - affiche les autres infos utiles */
