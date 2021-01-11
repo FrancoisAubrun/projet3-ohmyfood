@@ -217,6 +217,12 @@ header a {
   background-color: #f5edff;
 }
 
+.fonctionnement .étape-1:hover i,
+.fonctionnement .étape-2:hover i,
+.fonctionnement .étape-3:hover i {
+  color: #9356DC;
+}
+
 .fonctionnement .numero {
   position: absolute;
   text-align: center;
@@ -333,15 +339,20 @@ header a {
   float: left;
 }
 
-.restaurants .restau .fa-heart::before {
+.restaurants .restau .fa-heart {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   right: 35px;
+  bottom: 30px;
   position: absolute;
   font-size: 170%;
   color: #000;
   cursor: pointer;
+}
+
+.restaurants .restau .fa-heart :active {
+  color: red;
 }
 
 /* Footer - affiche les autres infos utiles */

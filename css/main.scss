@@ -2,6 +2,7 @@
 
 @import "./2_utils/variables";
 
+
 /* Règles transverses */
 
 * {
@@ -82,7 +83,7 @@ header {
   display: flex;
   padding: 20px 20px 20px 20px;
   justify-content: center;
-  width:100%;
+  width: 100%;
 
   .logo {
     width: 60%;
@@ -97,8 +98,8 @@ header {
 
   a {
     color: #000;
-    justify-content:center;
-    display:flex;
+    justify-content: center;
+    display: flex;
   }
 }
 
@@ -187,6 +188,10 @@ header {
 
     &:hover {
       background-color: #f5edff;
+
+      i {
+        color: $colour-primary;
+      }
     }
   }
 
@@ -289,13 +294,22 @@ header {
       padding-left: 10px;
       float: left;
     }
-    .fa-heart::before {
+    .fa-heart {
       display: flex;
-      right:35px;
-      position:absolute;
+      right: 35px;
+      bottom:30px;
+      position: absolute;
       font-size: 170%;
       color: #000;
       cursor: pointer;
+
+      .button {
+        border:none;
+        color: #FFF;
+        background-color: #fff;
+      & :active {
+        background:red;
+      }
     }
   }
 }
@@ -405,11 +419,8 @@ header {
       }
       .underlined {
         text-decoration: underline $colour-tertiary;
-        text-decoration-thickness: 4px;
-        text-underline-offset: 8px;
       }
-      }
-    
+    }
 
     .choix {
       width: 92%;
@@ -513,9 +524,7 @@ header {
   }
   .btn-explorer {
     margin-top: 50px;
-
     a {
       color: #fff;
     }
-  }
-}
+    }
