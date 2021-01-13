@@ -18,7 +18,7 @@
     />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/main.css" />
+    <link lang="scss" rel="stylesheet" href="css/main.css" />
 
     <title>Ohmyfood Accueil</title>
 
@@ -38,13 +38,12 @@
     </header>
 
     <!-- Section 1 = searchbar-->
-    <section id="searchbar">
-      <div class="searchbar">
-        <input
-          class="form-control"
-          type="search"
-          placeholder="Paris, Belleville"
-        />
+    <section id="localisation">
+      <div class="localisation">
+        <div class="text-localisation">
+          <i class="fas fa-map-marker-alt"></i>
+          <p>Paris, Belleville</p>
+        </div>
       </div>
     </section>
 
@@ -102,6 +101,7 @@
             <h5>Ménilmontant</h5>
           </a>
           <i class="far fa-heart"></i>
+          <span class="coeur-hover"><i class="fas fa-heart"></i></span>
         </div>
 
         <div class="restau">
@@ -115,6 +115,7 @@
             <h5>Charonne</h5>
           </a>
           <i class="far fa-heart"></i>
+          <span class="coeur-hover"><i class="fas fa-heart"></i></span>
         </div>
 
         <div class="restau">
@@ -127,6 +128,7 @@
             <h5>Cité Rouge</h5>
           </a>
           <i class="far fa-heart"></i>
+          <span class="coeur-hover"><i class="fas fa-heart"></i></span>
         </div>
 
         <div class="restau">
@@ -139,6 +141,7 @@
             <h5>Folie-Méricourt</h5>
           </a>
           <i class="far fa-heart"></i>
+          <span class="coeur-hover"><i class="fas fa-heart"></i></span>
         </div>
       </div>
     </section>
@@ -147,14 +150,14 @@
     <footer id="footer">
       <div class="footer">
         <img src="images/logo/ohmyfood@2x.svg" alt="logo" class="logo" />
-        <div class="proposer"
-          ><i class="fas fa-utensils"></i>
-          <p>Proposer un restaurant</p></div
-        >
-        <div class="partenaire"
-          ><i class="fas fa-hands-helping"></i>
-          <p>Devenir partenaire</p></div
-        >
+        <div class="proposer">
+          <i class="fas fa-utensils"></i>
+          <p>Proposer un restaurant</p>
+        </div>
+        <div class="partenaire">
+          <i class="fas fa-hands-helping"></i>
+          <p>Devenir partenaire</p>
+        </div>
         <p>Mentions légales</p>
         <a href="mailto:commander@ohmyfood.fr"><p>Contact</p></a>
       </div>

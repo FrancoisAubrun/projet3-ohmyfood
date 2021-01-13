@@ -92,7 +92,7 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 20px 20px 20px 20px;
+  padding: 20px 0 20px 0px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -122,20 +122,53 @@ header a {
 
 /* Accueil */
 /* Section 1 = searchbar */
-.searchbar {
-  width: 100%;
-}
-
-.searchbar .form-control {
+.localisation {
   width: 100%;
   height: 40px;
-  font-size: 16px;
-  font-weight: 600;
-  color: #000000;
-  text-align: center;
-  font-family: "Roboto", sans-serif;
+  margin: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background: -webkit-gradient(linear, left top, left bottom, from(#b5b5b5), color-stop(17%, #eaeaea));
   background: linear-gradient(180deg, #b5b5b5 0%, #eaeaea 17%);
+}
+
+.localisation .text-localisation {
+  margin: auto;
+  width: 170px;
+  height: 40px;
+}
+
+.localisation .text-localisation i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 40px;
+  width: 20px;
+  float: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.localisation .text-localisation p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 40px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #353535;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Roboto", sans-serif;
 }
 
 /* Section 2 = bandeau d'exploration */
@@ -349,10 +382,22 @@ header a {
   font-size: 170%;
   color: #000;
   cursor: pointer;
+  overflow: hidden;
 }
 
-.restaurants .restau .fa-heart :active {
-  color: red;
+.restaurants .restau .fa-heart:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.restaurants .restau .coeur-hover {
+  opacity: 0;
+}
+
+.restaurants .restau .coeur-hover:hover {
+  opacity: 1;
 }
 
 /* Footer - affiche les autres infos utiles */
@@ -415,7 +460,6 @@ header a {
   position: relative;
   border-top-right-radius: 40px;
   border-top-left-radius: 40px;
-  /* menu_détail */
 }
 
 .menu .titremenu {
@@ -467,6 +511,14 @@ header a {
   padding-right: 8%;
 }
 
+.menu .titremenu i:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+}
+
 @media screen and (min-width: 1000px) {
   .menu .titremenu i {
     width: 100%;
@@ -476,13 +528,44 @@ header a {
   }
 }
 
-.menu .menu_detail h3 {
+/* menu_détail */
+.menu_detail h3 {
   margin-top: 40px;
   padding: 0 0 10px 20px;
+  -webkit-animation: fadeinh3 1.5s;
+          animation: fadeinh3 1.5s;
+}
+
+@-webkit-keyframes fadeinh3 {
+  from {
+    opacity: 0;
+    margin-top: 100px;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+    margin-top: 40px;
+  }
+}
+
+@keyframes fadeinh3 {
+  from {
+    opacity: 0;
+    margin-top: 100px;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+    margin-top: 40px;
+  }
 }
 
 @media screen and (min-width: 1000px) {
-  .menu .menu_detail h3 {
+  .menu_detail h3 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -493,14 +576,12 @@ header a {
   }
 }
 
-.menu .menu_detail h3 .underlined {
-  -webkit-text-decoration: underline #99E2D0;
-          text-decoration: underline #99E2D0;
-  text-decoration-thickness: 4px;
-  text-underline-offset: 8px;
+.menu_detail h3 .underlined {
+  border-bottom: 4px solid #99E2D0;
+  padding-bottom: 5px;
 }
 
-.menu .menu_detail .choix {
+.menu_detail .choix {
   width: 92%;
   max-width: 800px;
   padding: 10px 0 30px 20px;
@@ -513,14 +594,17 @@ header a {
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  -webkit-animation: fadein 1s;
-          animation: fadein 1s;
+  -webkit-animation: fadein 1.5s;
+          animation: fadein 1.5s;
 }
 
 @-webkit-keyframes fadein {
   from {
     opacity: 0;
-    margin-top: 40px;
+    margin-top: 100px;
+  }
+  50% {
+    opacity: 0.2;
   }
   to {
     opacity: 1;
@@ -531,7 +615,10 @@ header a {
 @keyframes fadein {
   from {
     opacity: 0;
-    margin-top: 40px;
+    margin-top: 100px;
+  }
+  50% {
+    opacity: 0.2;
   }
   to {
     opacity: 1;
@@ -539,8 +626,8 @@ header a {
   }
 }
 
-.menu .menu_detail .choix h4,
-.menu .menu_detail .choix h5 {
+.menu_detail .choix h4,
+.menu_detail .choix h5 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -552,7 +639,7 @@ header a {
   transition: all 0.5s ease;
 }
 
-.menu .menu_detail .choix p {
+.menu_detail .choix p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -568,7 +655,7 @@ header a {
   transition: all 0.5s;
 }
 
-.menu .menu_detail .choix .check {
+.menu_detail .choix .check {
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -579,7 +666,7 @@ header a {
   width: 60px;
   z-index: 2;
   top: 0;
-  right: 0;
+  right: -60px;
   padding: 0;
   margin: 0;
   -webkit-box-pack: center;
@@ -589,7 +676,7 @@ header a {
   transition: all 0.5s;
 }
 
-.menu .menu_detail .choix .check i {
+.menu_detail .choix .check i {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -602,49 +689,30 @@ header a {
   transition: all 0.5s;
 }
 
-.menu .menu_detail .choix:hover .check {
+.menu_detail .choix:hover .check {
   opacity: 1;
-  -webkit-animation: apparition 0.5s;
-          animation: apparition 0.5s;
+  right: 0;
 }
 
-@-webkit-keyframes apparition {
-  from {
-    right: -60px;
-  }
-  to {
-    right: 0px;
-  }
-}
-
-@keyframes apparition {
-  from {
-    right: -60px;
-  }
-  to {
-    right: 0px;
-  }
-}
-
-.menu .menu_detail .choix:hover i {
+.menu_detail .choix:hover i {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
 }
 
-.menu .menu_detail .choix:hover h4,
-.menu .menu_detail .choix:hover h5 {
+.menu_detail .choix:hover h4,
+.menu_detail .choix:hover h5 {
   width: 65%;
 }
 
-.menu .menu_detail .choix:hover p {
+.menu_detail .choix:hover p {
   padding-right: 70px;
 }
 
-.menu .btn-explorer {
+.btn-explorer {
   margin-top: 50px;
 }
 
-.menu .btn-explorer a {
+.btn-explorer a {
   color: #fff;
 }
 /*# sourceMappingURL=main.css.map */
