@@ -87,14 +87,10 @@
   @-webkit-keyframes disparition {
     from {
       visibility:visible;
-      opacity:1;
     }
-    50% {
-      opacity:0.8
-    }
+  
     to {
      visibility:hidden;
-     opacity:0;
     }
   }
 
